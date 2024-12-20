@@ -8,6 +8,6 @@ export default defineConfig({
       "@": "/src",
     },
   },
-  base: "/terr-on/",
+  base: "/terr-on",
   plugins: [react()],
 });

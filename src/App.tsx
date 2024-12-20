@@ -1,8 +1,17 @@
-import "./App.css";
-import Home from "@/pages/home";
+import { Route, Routes } from "react-router";
+import { AppWrapper } from "./App.styled";
+import { ROUTES } from "./routes";
 
-function App() {
-  return <Home></Home>;
-}
-
-export default App;
+export const App = () => (
+  <AppWrapper>
+    <Routes>
+      {ROUTES.map(({ layout, routes }, index) => (
+        <Route key={index} element={layout}>
+          {routes.map(({ element, path, name }) => (
+            <Route key={name} element={element} path={path} />
+          ))}
+        </Route>
+      ))}
+    </Routes>
+  </AppWrapper>
+);
