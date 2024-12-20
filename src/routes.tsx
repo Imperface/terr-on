@@ -1,7 +1,7 @@
 import React from "react";
 import { AnonymousLayout } from "@/layouts";
 
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 
 import { ROUTES_KEY } from "@/constants/ROUTES_KEY";
 import AboutUs from "./pages/AboutUs";
